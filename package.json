@@ -1,0 +1,33 @@
+{
+  "name": "cta-led-light-map-server",
+  "version": "1.0.0",
+  "description": "Backend server for CTA LED Light Map",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeyB303/cta-led-light-map-server.git"
+  },
+  "author": "Michael Bonetti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeyB303/cta-led-light-map-server/issues"
+  },
+  "homepage": "https://github.com/MikeyB303/cta-led-light-map-server#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "node-cron": "^2.0.3",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "typescript": "^3.9.7"
+  }
+}
