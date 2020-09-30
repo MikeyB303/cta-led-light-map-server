@@ -20,7 +20,7 @@ export class HttpTrainLocationsRepository extends HttpRepository {
 
     private transformLocationsResponseData(data: any): Route[] {
         const routeArray: Route[] = []
-        
+
         data.ctatt.route.forEach(route => {
             routeArray.push(new Route(route['@name'], route.train))
         });

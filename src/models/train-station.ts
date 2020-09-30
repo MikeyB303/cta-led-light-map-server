@@ -15,7 +15,7 @@ export class TrainStation {
     getArrivalUpdate(trains: TrainLocation[]): Arrival {
         let trainArriving = false
         trains.forEach(train => {
-            
+
             if (train.nextStaId == this.stationId && train.isApp === "1") {
                 trainArriving = true
             }

@@ -9,12 +9,12 @@ import { Arrival } from "../models/arrival";
 @autoInjectable()
 export class TrainLocationUpdateScheduler {
 
-    constructor(private locationService?: TrainLocationsService, private arrivalService?: StationArrivalService, 
+    constructor(private locationService?: TrainLocationsService, private arrivalService?: StationArrivalService,
         private updateService?: UpdateService) {
     }
 
     updateTrainLocations = cron.schedule("*/5 * * * * *", () => {
-        this.locationService.getTrainLocationsForRoutes([RouteCode.BLUE]).then(routes => { 
+        this.locationService.getTrainLocationsForRoutes([RouteCode.BLUE]).then(routes => {
             routes.forEach(route => {
                 const arrivals: Arrival[] = this.arrivalService.getArrivalsForRoute(route)
                 this.updateService.sendArrivalsUpdateForRoute(route.name, arrivals)

@@ -13,7 +13,7 @@ export class UpdateService {
     public sendArrivalsUpdateForRoute(route: string, arrivals: Arrival[]): void {
         const payload: UpdatePayload = new UpdatePayload(this.getRGBValueForRoute(route), arrivals)
         const routeUpdateMessage: string = route + "-update"
-        
+
         this.server.emitUpdate(routeUpdateMessage, payload)
     }
 
